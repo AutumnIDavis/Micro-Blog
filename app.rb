@@ -41,7 +41,7 @@ post '/users/new' do
     puts params
     puts "****************************"
     User.create(params[:post])
-    redirect '/users'
+    redirect '/sign-in'
 end
 
 post '/sign-in' do
