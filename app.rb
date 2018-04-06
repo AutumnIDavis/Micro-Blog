@@ -32,6 +32,10 @@ get '/user/:id' do
     erb :user
 end
 
+get '/account' do
+    erb :account
+end
+
 post '/users/new' do
     puts "****************************"
     puts params
