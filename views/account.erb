@@ -1,7 +1,11 @@
-<h1><%= current_user.fname %>'s Settings</h1>
+<div class="hm-container">
+      <div class="welcomeHome">
+        <h1><%= current_user.fname %>'s Settings</h1>
 
-<p> <%= current_user.lname %></p>
+        <p>Last Name: <%= current_user.lname %></p>
 
-<p> <%= current_user.password %></p>
+        <p>Password: <%= current_user.password %></p>
 
-<p> <%= current_user.age %></p>
+        <p>Age: <%= current_user.age %></p>
+  </div>
+</div>

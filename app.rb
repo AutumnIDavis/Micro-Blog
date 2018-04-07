@@ -18,7 +18,14 @@ get '/' do
 end
 
 get '/about' do
+    @users = User.all
     erb :about
+end
+
+get '/about/:id' do
+    @user = User.find(params[:id])
+    @posts = @user.posts
+    erb :abouts
 end
 
 get '/users' do
@@ -41,7 +48,7 @@ post '/users/new' do
     puts params
     puts "****************************"
     User.create(params[:post])
-    redirect '/sign-in'
+    redirect '/users'
 end
 
 post '/sign-in' do
@@ -49,7 +56,7 @@ post '/sign-in' do
     if @user.password == params[:password]
         session[:user_id] = @user.id
         flash[:notice] = "Success!"
-        redirect '/'
+        redirect '/about'
     else
         flash[:notice] = "FAILED LOGIN :("
         redirect '/sign-in-failed'
