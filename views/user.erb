@@ -1,8 +1,39 @@
-<h2>Welcome to <%= @user.fname %>'s Page!</h2>
+<div class="hm-container">
+      <div class="welcomeHome">
 
-<% @posts.each do |post| %>
-    <h3><%= post.title %></h3>
-    <p>
-        <%= post.content %>
-    </p>
-<% end %>
+    <h2>Welcome to <%= @user.fname %>'s Page!</h2>
+
+    <% @posts.each do |post| %>
+        <h3><%= post.title %></h3>
+        <p>
+            <%= post.content %>
+        </p>
+    <% end %>
+
+    <div id="postTitle">
+      <input id="postInput" placeholder="Title" value=""></input>
+    </div>
+
+    <div id="postText">
+      <input id="post_Input" placeholder="Post" value=""></input>
+      <input type="submit" name="" for="post_Input" onclick="post()" value="Post">
+    </div>
+
+
+  </div>
+</div>
+
+<script>
+
+// var postVal = document.getElementById('postTitle').value;
+
+
+  function post(){
+    titVal = document.getElementById('postInput').value
+    postVal = document.getElementById('post_Input').value
+    console.log(titVal)
+    console.log(postVal)
+  }
+
+
+</script>
