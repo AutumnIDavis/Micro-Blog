@@ -23,9 +23,18 @@ li {
   text-shadow: -3px 3px 9px black;
 }
 
+:notice{
+  display: inline-block;
+}
+
+h2{
+
+}
+
 a{
     text-decoration: none;
-    color: white;
+    color: #939393;
+    font-size: 30px;
 }
 
 .welcomeHome{
