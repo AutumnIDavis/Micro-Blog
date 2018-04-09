@@ -1,12 +1,29 @@
 <div class="hm-container">
       <div class="welcomeHome">
         <h1><%= current_user.fname %>'s Settings</h1>
+          <form class="" action="/" method="post">
 
-        <p>Last Name: <%= current_user.lname %></p>
+             <%= user = User.find_by(name: 'David')
+              user.name = 'Dave'
+              user.save
+              %>
 
-        <p>Password: <%= current_user.password %></p>
+              <p>First Name: <%= current_user.fname %></p>
+              <input name="fnameEd" placeholder="First Name" value=""></input>
 
-        <p>Age: <%= current_user.age %></p>
+              <p>Last Name: <%= current_user.lname %></p>
+              <input name="lnameEd" placeholder="Last Name" value=""></input>
+
+              <p>Password: <%= current_user.password %></p>
+              <input name="passEd" placeholder="Password" value=""></input>
+
+              <p>Age: <%= current_user.age %></p>
+              <input name="ageEd" placeholder="Age" value=""></input>
+
+              <input type="submit" name=""  value="Save">
+
+          </form>
+     </div>
   </div>
 </div>
 <h2>Welcome to the Blog</h2>
@@ -16,3 +33,7 @@
 <input type='submit' name="" value="submit">
 
 </form>
+
+
+
+>>>>>>> 82cc4e64ca17346c12e314b1c499d6c13d954045

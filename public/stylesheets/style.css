@@ -8,6 +8,10 @@ header{
   margin: -1%;
 }
 
+header :a{
+  /* color: white; */
+}
+
 ul{
   text-align: right;
 }
@@ -23,9 +27,20 @@ li {
   text-shadow: -3px 3px 9px black;
 }
 
+#postTitle{
+  padding: 20px 150px 135px 20px;
+  margin: 20px;
+}
+
+#postText{
+  padding: 20px 150px 135px 20px;
+  margin: 20px;
+}
+
 a{
     text-decoration: none;
-    color: white;
+    color: #939393;
+    font-size: 30px;
 }
 
 .welcomeHome{
