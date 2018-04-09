@@ -15,6 +15,10 @@ def current_user
     end
 end
 
+def edit
+  @user = User.find(params[:id])
+end
+
 get '/' do
     erb :home
 end
@@ -72,15 +76,14 @@ post '/sign-in' do
         redirect '/about'
     else
         flash[:notice] = "FAILED LOGIN :("
-        redirect '/sign-in-failed'
+        redirect '/not-signed-in'
     end
 end
 
-get '/sign-in-failed' do
-    erb :sign_in_failed
+post '/not_signed_in' do
+    erb :not_signed_in
 end
 
-get '/sign-out' do
-
-    erb :home
+get '/not-signed-in' do
+    erb :not_signed_in
 end
