@@ -3,12 +3,7 @@
 
     <h2>Welcome to <%= @user.fname %>'s Page!</h2>
 
-    <% @posts.each do |post| %>
-        <h3><%= post.title %></h3>
-        <p>
-            <%= post.content %>
-        </p>
-    <% end %>
+
 
     <div id="postTitle">
       <input id="postInput" placeholder="Title" value=""></input>
@@ -20,13 +15,19 @@
     </div>
 
 
+
+    <% @posts.each do |post| %>
+        <h3><%= post.title %></h3>
+        <p>
+            <%= post.content %>
+        </p>
+    <% end %>
+
+
   </div>
 </div>
 
-<script>
-
-// var postVal = document.getElementById('postTitle').value;
-
+<!-- <script>
 
   function post(){
     titVal = document.getElementById('postInput').value
@@ -35,5 +36,4 @@
     console.log(postVal)
   }
 
-
-</script>
+</script> -->
