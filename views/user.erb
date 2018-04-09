@@ -2,19 +2,13 @@
       <div class="welcomeHome">
 
     <h2>Welcome to <%= @user.fname %>'s Page!</h2>
+    <h2>Welcome to the Blog</h2>
+    <form class="" action="/users" method="post">
+    <input type="text" name="title" >
+    <textarea name="blog" rows="8" cols="80"></textarea>
+    <input type='submit' name="" value="submit">
 
-
-
-    <div id="postTitle">
-      <input id="postInput" placeholder="Title" value=""></input>
-    </div>
-
-    <div id="postText">
-      <input id="post_Input" placeholder="Post" value=""></input>
-      <input type="submit" name="" for="post_Input" onclick="post()" value="Post">
-    </div>
-
-
+    </form>
 
     <% @posts.each do |post| %>
         <h3><%= post.title %></h3>
@@ -26,14 +20,3 @@
 
   </div>
 </div>
-
-<!-- <script>
-
-  function post(){
-    titVal = document.getElementById('postInput').value
-    postVal = document.getElementById('post_Input').value
-    console.log(titVal)
-    console.log(postVal)
-  }
-
-</script> -->

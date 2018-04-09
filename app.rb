@@ -39,6 +39,19 @@ get '/users' do
     erb :users
 end
 
+post'/users' do
+  @newpost = Post.create( title: params[:title], content: params[:blog], user_id: current_user.id)
+
+end
+
+get '/user' do
+
+end
+
+post '/user' do
+
+end
+
 get '/user/:id' do
     @user = User.find(params[:id])
     @posts = @user.posts
