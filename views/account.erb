@@ -1,26 +1,40 @@
 <div class="hm-container">
       <div class="welcomeHome">
-        <!-- <% if current_user %>
-            <h2>Welcome back <%= current_user.fname %>!</h2>
-        <% end %> -->
         <h1><%= current_user.fname %>'s Settings</h1>
+          <form class="" action="/" method="post">
 
-        <p>Last Name: <%= current_user.lname %></p>
-        <input id="lnameEd" placeholder="Edit" value=""></input>
-        <input type="submit" name="" for="lnameEd" onclick="lName()" value="Save">
+             <%= user = User.find_by(name: 'David')
+              user.name = 'Dave'
+              user.save
+              %>
+              
+              <p>First Name: <%= current_user.fname %></p>
+              <input name="fnameEd" placeholder="First Name" value=""></input>
 
-        <p>Password: <%= current_user.password %></p>
-        <input id="pass" placeholder="Edit" value=""></input>
-        <input type="submit" name="" for="pass" onclick="pAss()" value="Save">
+              <p>Last Name: <%= current_user.lname %></p>
+              <input name="lnameEd" placeholder="Last Name" value=""></input>
 
+              <p>Password: <%= current_user.password %></p>
+              <input name="passEd" placeholder="Password" value=""></input>
 
-        <p>Age: <%= current_user.age %></p>
-        <input id="age" placeholder="Edit" value=""></input>
-        <input type="submit" name="" for="age" onclick="aGe()" value="Save">
-    </div>
+              <p>Age: <%= current_user.age %></p>
+              <input name="ageEd" placeholder="Age" value=""></input>
+
+              <input type="submit" name=""  value="Save">
+
+          </form>
+     </div>
   </div>
 
-<script>
+
+<!-- <script>
+
+  function fName(){
+    fName = document.getElementById('fnameEd').value
+    fName.innerHTML = document.getElementById('fnameEd').value
+    console.log(fName)
+  }
+
     function lName(){
       lName = document.getElementById('lnameEd').value
       lName.innerHTML = document.getElementById('lnameEd').value
@@ -38,4 +52,4 @@
       aGe.innerHTML = document.getElementById('age').value
       console.log(aGe)
     }
-</script>
+</script> -->
