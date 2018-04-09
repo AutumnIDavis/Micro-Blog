@@ -15,16 +15,12 @@ def current_user
     end
 end
 
-def edit
-  @user = User.find(params[:id])
-end
-
 get '/' do
     erb :home
 end
 
 get '/about' do
-    @users = User.all
+    @users = User.all 
     erb :about
 end
 
@@ -37,19 +33,6 @@ end
 get '/users' do
     @users = User.all
     erb :users
-end
-
-post'/users' do
-  @newpost = Post.create( title: params[:title], content: params[:blog], user_id: current_user.id)
-
-end
-
-get '/user' do
-
-end
-
-post '/user' do
-
 end
 
 get '/user/:id' do
