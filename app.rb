@@ -20,13 +20,12 @@ get '/' do
 end
 
 get '/about' do
-    @users = User.all 
+    @users = User.all
     erb :about
 end
 
 get '/about/:id' do
     @user = User.find(params[:id])
-    # User.find(1).posts
     erb :abouts
 end
 
