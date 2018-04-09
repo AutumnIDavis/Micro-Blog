@@ -15,10 +15,6 @@ def current_user
     end
 end
 
-def edit
-  @user = User.find(params[:id])
-end
-
 get '/' do
     erb :home
 end
