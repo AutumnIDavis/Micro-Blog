@@ -3,9 +3,11 @@ require 'sinatra/activerecord'
 require 'bundler/setup'
 require 'sinatra/flash'
 require './models'
+require 'rake'
 enable :sessions
 
 set :database, "sqlite3:second_app.sqlite3"
+
 
 def current_user
     if session[:user_id]
@@ -24,7 +26,7 @@ end
 
 get '/about/:id' do
     @user = User.find(params[:id])
-    @posts = @user.posts
+    # User.find(1).posts
     erb :abouts
 end
 
@@ -39,8 +41,20 @@ get '/user/:id' do
     erb :user
 end
 
+get '/user/destroy/:id' do
+    session[:user_id] = nil
+    @user = User.find(params[:id])
+    @user.destroy
+    erb :home
+end
+
 get '/account' do
     erb :account
+end
+
+get '/sign-out' do
+  session[:user_id] = nil
+  redirect '/'
 end
 
 post '/users/new' do
@@ -55,7 +69,6 @@ post '/sign-in' do
     @user = User.where(fname: params[:fname]).first
     if @user.password == params[:password]
         session[:user_id] = @user.id
-        flash[:notice] = "Success!"
         redirect '/about'
     else
         flash[:notice] = "FAILED LOGIN :("
@@ -65,4 +78,9 @@ end
 
 get '/sign-in-failed' do
     erb :sign_in_failed
+end
+
+get '/sign-out' do
+
+    erb :home
 end

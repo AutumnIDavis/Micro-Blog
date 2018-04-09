@@ -1,11 +1,41 @@
 <div class="hm-container">
       <div class="welcomeHome">
+        <!-- <% if current_user %>
+            <h2>Welcome back <%= current_user.fname %>!</h2>
+        <% end %> -->
         <h1><%= current_user.fname %>'s Settings</h1>
 
         <p>Last Name: <%= current_user.lname %></p>
+        <input id="lnameEd" placeholder="Edit" value=""></input>
+        <input type="submit" name="" for="lnameEd" onclick="lName()" value="Save">
 
         <p>Password: <%= current_user.password %></p>
+        <input id="pass" placeholder="Edit" value=""></input>
+        <input type="submit" name="" for="pass" onclick="pAss()" value="Save">
+
 
         <p>Age: <%= current_user.age %></p>
+        <input id="age" placeholder="Edit" value=""></input>
+        <input type="submit" name="" for="age" onclick="aGe()" value="Save">
+    </div>
   </div>
-</div>
+
+<script>
+    function lName(){
+      lName = document.getElementById('lnameEd').value
+      lName.innerHTML = document.getElementById('lnameEd').value
+      console.log(lName)
+    }
+
+    function pAss(){
+      pAss = document.getElementById('pass').value
+      pAss.innerHTML = document.getElementById('pass').value
+      console.log(pAss)
+    }
+
+    function aGe(){
+      aGe = document.getElementById('age').value
+      aGe.innerHTML = document.getElementById('age').value
+      console.log(aGe)
+    }
+</script>
