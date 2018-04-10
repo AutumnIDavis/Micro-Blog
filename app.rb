@@ -43,6 +43,39 @@ get '/user/:id' do
     erb :user
 end
 
+get '/user' do
+  erb :user
+end	
+
+post '/user' do
+    @user = current_user
+    if params[:fnameEd].empty?
+      @user.fname = @user.fname
+    else
+       @user.fname = params[:fnameEd]
+    end
+
+    if params[:lnameEd].empty?
+      @user.lname == @user.lname
+    else
+       @user.lname = params[:lnameEd]
+    end
+
+    if params[:passEd].empty?
+      @user.password == @user.password
+    else
+       @user.password = params[:passEd]
+    end
+
+    if params[:ageEd].empty?
+      @user.age == @user.age
+    else
+       @user.age = params[:ageEd]
+    end
+    @user.save
+    redirect ('/users')
+end
+
 get '/user/destroy/:id' do
     session[:user_id] = nil
     @user = User.find(params[:id])
