@@ -1,9 +1,7 @@
 <div class="hm-container">
       <div class="welcomeHome">
         <h1><%= current_user.fname %>'s Settings</h1>
-          <form class="" action="/" method="post">
-
-
+          <form class="" action="user/:id" method="post">
 
               <p>First Name: <%= current_user.fname %></p>
               <input name="fnameEd" placeholder="First Name" value=""></input>
@@ -19,6 +17,10 @@
 
               <input type="submit" name=""  value="Save">
 
+              <form class="" action="/user/destroy/<%= current_user.id %>" method="get">
+                <input id="delAcc" type="submit" name="" value="Delete Account">
+              </form>
+
           </form>
      </div>
-  </div> 
+  </div>
