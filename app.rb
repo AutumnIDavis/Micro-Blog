@@ -49,7 +49,33 @@ get '/user' do
 end
 
 post '/user' do
+    @user = current_user
+    if params[:fnameEd].empty?
+      @user.fname = @user.fname
+    else
+       @user.fname = params[:fnameEd]
+    end
 
+    if params[:lnameEd].empty?
+      @user.lname == @user.lname
+    else
+       @user.lname = params[:lnameEd]
+    end
+
+    if params[:passEd].empty?
+      @user.password == @user.password
+    else
+       @user.lname = params[:passEd]
+    end
+
+    if params[:ageEd].empty?
+      @user.age == @user.age
+    else
+       @user.lname = params[:ageEd]
+    end
+
+     @user.save
+redirect ('/users')
 end
 
 get '/user/:id' do
