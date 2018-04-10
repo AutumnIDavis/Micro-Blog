@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20180406123926) do
     t.string "title", limit: 50
     t.text "content"
     t.integer "user_id"
-  end
+  end 
 
   create_table "users", force: :cascade do |t|
     t.string "fname"

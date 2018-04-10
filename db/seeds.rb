@@ -4,7 +4,7 @@ user_list = [
   ["Kashmir", "Davis","jinglebell","17"],
   ["Francis", "Langly","marshmello","45"],
   ["Roman", "Walker","toffee","25"],
-  ["Ashton", "Martin","popcorn","13"]
+  ["Ashton", "Martin","popcorn","13"] 
 ]
 
 user_list.each do |fname, lname, password, age|

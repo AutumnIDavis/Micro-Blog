@@ -29,14 +29,14 @@ li {
 }
 
 a{
-    text-decoration: none;
+    text-decoration: none; 
     color: #939393;
     font-size: 30px;
 }
 
 #titleForm{
   display: flex;
-  margin: 50px 0px 22px;
+  margin: 39px 0px;
 }
 
 #postTitle{
