@@ -29,9 +29,19 @@ li {
 }
 
 a{
-    text-decoration: none; 
+    text-decoration: none;
     color: #939393;
     font-size: 30px;
+}
+
+#editBtn{
+  display: flex;
+  margin: 15px 0px;
+}
+
+#delAcc{
+  display: block;
+  margin: 50px 0px;
 }
 
 #titleForm{
@@ -49,14 +59,31 @@ a{
   margin: 20px;
 }
 
+
 .welcomeHome{
   background-color: rgba(255, 255, 255, 0.6);
-  padding: 2% 7% 100%;
+  padding: 2% 8% 100%;
   border-right: solid #e4bdfa 2px;
   border-left: solid #e4bdfa 2px;
 }
 
 .hm-container{
-  margin: -1%;
-  padding: 0% 20% 30% 337px;
+  margin: 0% -1%;
+  padding: 0% 28% 3%;
+  display: inline-block;
+  width: 50%;
+}
+
+.hm-container1{
+  margin: 0% -1%;
+  padding: 0% 0% 3%;
+  display: -webkit-inline-box;
+  width: 25%;
+}
+
+#mainContainer{
+  background-color: rgba(255, 255, 255, 0.39);
+  padding: 4% 6%;
+  width: 294%;
+  height: 741px;
 }

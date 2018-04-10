@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180406123926) do
+ActiveRecord::Schema.define(version: 2018_04_06_123926) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title", limit: 50
     t.text "content"
     t.integer "user_id"
-  end 
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "fname"

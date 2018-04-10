@@ -11,7 +11,7 @@ set :database, "sqlite3:second_app.sqlite3"
 post'/users' do
   @newpost = Post.create( title: params[:title], content: params[:blog], user_id: current_user.id)
 end
- 
+
 def current_user
     if session[:user_id]
         @current_user = User.find(session[:user_id])

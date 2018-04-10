@@ -1,9 +1,15 @@
-<div class="hm-container">
+<div class="hm-container1">
 
   <div class="welcomeHome">
-    <h1>Welcome!</h1>
 
-    <h2>Create new User</h2>
+    <h3>Sign in User</h3>
+    <form class="" action="/sign-in" method="post">
+        <input type="text" name="fname" placeholder="First Name">
+        <input type="text" name="password" placeholder="Password">
+        <input type="submit" name="" value="Sign In">
+    </form>
+
+    <h3>Create new User</h3>
     <form class="" action="/users/new" method="post">
         <input type="text" name= "[post]fname" placeholder="First Name">
         <input type="text" name= "[post]lname" placeholder="Last Name">
@@ -13,12 +19,10 @@
         <input type="submit" name="" value="Create">
     </form>
 
-    <h2>Sign in User</h2>
-    <form class="" action="/sign-in" method="post">
-        <input type="text" name="fname" placeholder="First Name">
-        <input type="text" name="password" placeholder="Password">
-        <input type="submit" name="" value="Sign In">
-    </form>
+
+
+  </div>
+  <div id="mainContainer">
+    <h1>Welcome!</h1>
   </div>
 </div>
- 
