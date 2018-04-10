@@ -65,13 +65,13 @@ post '/user' do
     if params[:passEd].empty?
       @user.password == @user.password
     else
-       @user.lname = params[:passEd]
+       @user.password = params[:passEd]
     end
 
     if params[:ageEd].empty?
       @user.age == @user.age
     else
-       @user.lname = params[:ageEd]
+       @user.age = params[:ageEd]
     end
 
      @user.save
