@@ -45,7 +45,7 @@ post'/users' do
 end
 
 get '/user' do
-
+  erb :user
 end
 
 post '/user' do
