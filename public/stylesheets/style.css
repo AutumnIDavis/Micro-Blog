@@ -1,6 +1,7 @@
 body{
   font-family: 'Hi Melody', cursive;
   background-color: rgb(23, 165, 215);
+  /* background-image: url('images/bubbles.jpg'); */
 }
 
 header{
@@ -27,6 +28,17 @@ li {
   text-shadow: -3px 3px 9px black;
 }
 
+a{
+    text-decoration: none; 
+    color: #939393;
+    font-size: 30px;
+}
+
+#titleForm{
+  display: flex;
+  margin: 39px 0px;
+}
+
 #postTitle{
   padding: 20px 150px 135px 20px;
   margin: 20px;
@@ -35,12 +47,6 @@ li {
 #postText{
   padding: 20px 150px 135px 20px;
   margin: 20px;
-}
-
-a{
-    text-decoration: none;
-    color: #939393;
-    font-size: 30px;
 }
 
 .welcomeHome{
