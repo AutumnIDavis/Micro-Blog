@@ -1,16 +1,11 @@
 body{
   font-family: 'Hi Melody', cursive;
   background-color: rgb(23, 165, 215);
-  /* background-image: url('images/bubbles.jpg'); */
 }
 
 header{
-  background-color: rgba(197, 23, 240, 0.32);
+  background-color:rgba(0, 0, 0, 0.62);
   margin: -1%;
-}
-
-header :a{
-  /* color: white; */
 }
 
 ul{
@@ -29,9 +24,26 @@ li {
 }
 
 a{
-    text-decoration: none;
-    color: #939393;
-    font-size: 30px;
+  text-decoration: none;
+  color: #4ce4f9;
+  font-size: 30px;
+  text-shadow: -5px 2px 8px black;
+}
+
+h1{
+  text-align: center;
+  font-size: 80px;
+}
+
+#city{
+  opacity: 0.4;
+  position: relative;
+  left: -1674px;
+  z-index: -1;
+}
+
+#bubbles{
+  display: inline-block;
 }
 
 #editBtn{
@@ -42,6 +54,7 @@ a{
 #delAcc{
   display: block;
   margin: 50px 0px;
+  color: red;
 }
 
 #titleForm{
@@ -61,7 +74,7 @@ a{
 
 
 .welcomeHome{
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(186, 186, 186, 0.72);
   padding: 2% 8% 100%;
   border-right: solid #e4bdfa 2px;
   border-left: solid #e4bdfa 2px;
@@ -76,14 +89,14 @@ a{
 
 .hm-container1{
   margin: 0% -1%;
-  padding: 0% 0% 3%;
+  /* padding: 0% 0% 3%; */
   display: -webkit-inline-box;
   width: 25%;
 }
 
 #mainContainer{
   background-color: rgba(255, 255, 255, 0.39);
-  padding: 4% 6%;
+  padding: 43% 6%;
   width: 294%;
   height: 741px;
 }

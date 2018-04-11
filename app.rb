@@ -43,10 +43,44 @@ get '/user/:id' do
     erb :user
 end
 
+get '/user' do
+  erb :user
+end
+
+post '/user' do
+    @user = current_user
+    if params[:fnameEd].empty?
+      @user.fname = @user.fname
+    else
+       @user.fname = params[:fnameEd]
+    end
+
+    if params[:lnameEd].empty?
+      @user.lname == @user.lname
+    else
+       @user.lname = params[:lnameEd]
+    end
+
+    if params[:passEd].empty?
+      @user.password == @user.password
+    else
+       @user.password = params[:passEd]
+    end
+
+    if params[:ageEd].empty?
+      @user.age == @user.age
+    else
+       @user.age = params[:ageEd]
+    end
+    @user.save
+    redirect ('/users')
+end
+
 get '/user/destroy/:id' do
     session[:user_id] = nil
     @user = User.find(params[:id])
     @user.destroy
+    flash[:notice] = "Account Deleted"
     erb :home
 end
 
@@ -57,6 +91,7 @@ end
 get '/sign-out' do
   session[:user_id] = nil
   redirect '/'
+  flash[:notice] = "You are now signed out."
 end
 
 post '/users/new' do
@@ -64,7 +99,8 @@ post '/users/new' do
     puts params
     puts "****************************"
     User.create(params[:post])
-    redirect '/users'
+    flash[:notice] = "Awesome! Please sign in now."
+    redirect '/'
 end
 
 post '/sign-in' do
