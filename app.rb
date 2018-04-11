@@ -45,7 +45,7 @@ end
 
 get '/user' do
   erb :user
-end	
+end
 
 post '/user' do
     @user = current_user
@@ -80,6 +80,7 @@ get '/user/destroy/:id' do
     session[:user_id] = nil
     @user = User.find(params[:id])
     @user.destroy
+    flash[:notice] = "Account Deleted"
     erb :home
 end
 
@@ -90,6 +91,7 @@ end
 get '/sign-out' do
   session[:user_id] = nil
   redirect '/'
+  flash[:notice] = "You are now signed out."
 end
 
 post '/users/new' do
@@ -97,7 +99,8 @@ post '/users/new' do
     puts params
     puts "****************************"
     User.create(params[:post])
-    redirect '/users'
+    flash[:notice] = "Awesome! Please sign in now."
+    redirect '/'
 end
 
 post '/sign-in' do
