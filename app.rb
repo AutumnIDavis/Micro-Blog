@@ -7,7 +7,12 @@ require 'rake'
 enable :sessions
 
 set :database, "sqlite3:second_app.sqlite3"
-
+# before do
+#   current_user
+#   if current_user.nil?
+#       redirect '/'
+#     end
+# end
 
 def current_user
     if session[:user_id]
@@ -39,16 +44,48 @@ get '/users' do
     erb :users
 end
 
-post'/users' do
+post '/users' do
   @newpost = Post.create( title: params[:title], content: params[:blog], user_id: current_user.id)
-
+  redirect '/users'
 end
 
+get '/post_edit/post.id' do
+  
+  erb :post_edit
+end
+
+post 'post_edit/post.id' do
+  @post = current_user
+  if params[:title_edit].empty?
+    @post.title = @post.title
+  else
+     @post.title = params[:title_edit]
+  end
+
+  if params[:content_edit].empty?
+    @post.content = @post.content
+  else
+     @post.content = params[:content_edit]
+  end
+end
+
+post '/post_edit/delete' do
+  @post = current_user
+  Post.destroy
+end
+
+
 get '/user' do
+  @user = current_user
   erb :user
 end
 
-post '/user' do
+get '/account' do
+  @posts = Post.all
+  erb :account
+end
+
+post '/account' do
     @user = current_user
     if params[:fnameEd].empty?
       @user.fname = @user.fname
@@ -75,7 +112,7 @@ post '/user' do
     end
 
      @user.save
-redirect ('/users')
+redirect '/users'
 end
 
 get '/user/:id' do
@@ -91,9 +128,7 @@ get '/user/destroy/:id' do
     erb :home
 end
 
-get '/account' do
-    erb :account
-end
+
 
 get '/sign-out' do
   session[:user_id] = nil
