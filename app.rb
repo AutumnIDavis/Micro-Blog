@@ -46,15 +46,15 @@ end
 
 post '/users' do
   @newpost = Post.create( title: params[:title], content: params[:blog], user_id: current_user.id)
-  redirect '/users'
+  redirect '/account'
 end
 
-get '/post_edit/post.id' do
-  
+get '/post_edit/:id' do
+
   erb :post_edit
 end
 
-post 'post_edit/post.id' do
+post 'post_edit/:id' do
   @post = current_user
   if params[:title_edit].empty?
     @post.title = @post.title
