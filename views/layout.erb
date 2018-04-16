@@ -7,9 +7,10 @@
         <meta charset="utf-8">
         <title>Micro-Blog</title>
     </head>
-    <body background="/images/bubbles.jpg">
+    
         <%= flash[:notice] if flash[:notice] %>
         <header>
+          <nav>
             <ul>
                 <li><a href="/" style= "color: #4ce4f9;" >Home</a></li>
                 <li><a href="/about" style= "color: #4ce4f9;" >Me</a></li>
@@ -17,6 +18,7 @@
                 <li><a href="/account" style= "color: #4ce4f9;" >Account</a></li>
                 <li><a href="/sign-out" style= "color: #4ce4f9;" >Sign Out</a></li>
             </ul>
+          </nav>
         </header>
         <%= yield %>
     </body>
