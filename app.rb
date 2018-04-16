@@ -62,12 +62,14 @@ post '/post-edit/:id' do
   else
      @post.content = params[:content_edit]
   end
+  @post.save
   redirect '/user'
 end
 
-post '/post-edit/delete' do
-  @post = current_user
-  Post.destroy
+post '/delete/:id' do
+  @post = Post.find(params[:id])
+  @post.destroy
+  redirect '/user'
 end
 
 
