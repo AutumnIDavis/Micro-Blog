@@ -5,6 +5,9 @@
 body{
   font-family: 'Hi Melody', cursive;
   background-color: rgb(23, 165, 215);
+  background-image: url(/images/bubbles.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 header{
@@ -74,7 +77,4 @@ a{
   justify-content: center;
   margin: 0 auto;
   width: 100vw;
-
-
-  /*padding: 0% 20% 30% 337px;*/
 }
