@@ -71,15 +71,7 @@ post '/delete/:id' do
 end
 
 
-<<<<<<< HEAD
 
-=======
- get '/user' do
-  @user = current_user
-  @posts = Post.where(user_id: @user.id)
-  erb :user
- end
->>>>>>> Frida
 
 get '/account' do
   @posts = Post.all
@@ -119,13 +111,8 @@ get '/user/destroy/:id' do
     session[:user_id] = nil
     @user = User.find(params[:id])
     @user.destroy
-<<<<<<< HEAD
-    flash[:notice] = "Account Deleted"
-    erb :home
-=======
 
     redirect '/'
->>>>>>> Frida
 end
 
 
