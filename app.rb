@@ -43,12 +43,12 @@ post '/users' do
 end
 
 get '/post-edit/:id' do
-
+    @post = Post.find(params[:id])
   erb :post_edit
 end
 
-post 'post-edit/:id' do
-  @post = current_user
+post '/post-edit/:id' do
+  @post = Post.find(params[:id])
   if params[:title_edit].empty?
     @post.title = @post.title
   else
@@ -60,15 +60,26 @@ post 'post-edit/:id' do
   else
      @post.content = params[:content_edit]
   end
+  @post.save
+  redirect '/user'
 end
 
-post '/post-edit/delete' do
-  @post = current_user
-  Post.destroy
+post '/delete/:id' do
+  @post = Post.find(params[:id])
+  @post.destroy
+  redirect '/user'
 end
 
 
+<<<<<<< HEAD
 
+=======
+ get '/user' do
+  @user = current_user
+  @posts = Post.where(user_id: @user.id)
+  erb :user
+ end
+>>>>>>> Frida
 
 get '/account' do
   @posts = Post.all
@@ -108,8 +119,13 @@ get '/user/destroy/:id' do
     session[:user_id] = nil
     @user = User.find(params[:id])
     @user.destroy
+<<<<<<< HEAD
     flash[:notice] = "Account Deleted"
     erb :home
+=======
+
+    redirect '/'
+>>>>>>> Frida
 end
 
 

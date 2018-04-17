@@ -12,11 +12,21 @@
         <header>
           <nav>
             <ul>
+<<<<<<< HEAD
                 <li><a href="/" style= "color: #4ce4f9;" >Home</a></li>
                 <li><a href="/about" style= "color: #4ce4f9;" >Me</a></li>
                 <li><a href="/users" style= "color: #4ce4f9;" >Posts</a></li>
                 <li><a href="/account" style= "color: #4ce4f9;" >Account</a></li>
                 <li><a href="/sign-out" style= "color: #4ce4f9;" >Sign Out</a></li>
+=======
+                <li><a href="/" style= "color: white;" >Home</a></li>
+                <%if current_user%>
+                <li><a href="/about" style= "color: white;" >About</a></li>
+                <li><a href="/users" style= "color: white;" >Users</a></li>
+                <li><a href="/user" style= "color: white;" >Blog</a></li>
+                <li><a href="/account" style= "color: white;">All Blog Posts</a></li>
+                <%end%>
+>>>>>>> Frida
             </ul>
           </nav>
         </header>
