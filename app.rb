@@ -124,7 +124,8 @@ get '/user/destroy/:id' do
     session[:user_id] = nil
     @user = User.find(params[:id])
     @user.destroy
-    erb :home
+
+    redirect '/'
 end
 
 
