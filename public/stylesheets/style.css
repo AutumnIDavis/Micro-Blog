@@ -11,6 +11,7 @@ body{
 }
 
 header{
+<<<<<<< HEAD
   background-color: rgba(197, 23, 240, 0.32);
   margin: 0 auto;
 }
@@ -22,6 +23,26 @@ header{
 }
 
 
+=======
+<<<<<<< HEAD
+  background-color:rgba(0, 0, 0, 0.62);
+  margin: -1%;
+}
+
+=======
+  background-color: rgba(197, 23, 240, 0.32);
+  margin: 0 auto;
+}
+
+.profile {
+  font-size: 35px;
+  color: red;
+
+}
+
+
+>>>>>>> Frida
+>>>>>>> 9ece6ad5f7819385b89a7a5ef0a2714a96abc921
 ul{
   text-align: right;
 }
@@ -47,6 +68,7 @@ li {
   margin: 20px;
 }
 
+<<<<<<< HEAD
 a{
   text-decoration: none;
   color: #939393;
@@ -63,18 +85,71 @@ a{
 .welcomeHome {
   background-color: rgba(255, 255, 255, 0.6);
   padding: 2% 7% 100%;
+=======
+<<<<<<< HEAD
+
+.welcomeHome{
+  background-color: rgba(186, 186, 186, 0.72);
+  padding: 2% 8% 100%;
+=======
+a{
+  text-decoration: none;
+  color: #939393;
+  font-size: 30px;
+}
+
+.myblog {
+  width: 50vw;
+  float: right;
+  position: sticky;
+
+}
+
+.welcomeHome {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 2% 7% 100%;
+>>>>>>> Frida
+>>>>>>> 9ece6ad5f7819385b89a7a5ef0a2714a96abc921
   border-right: solid #e4bdfa 2px;
   border-left: solid #e4bdfa 2px;
   width: 50vw;
   height: auto;
+<<<<<<< HEAD
+
+=======
 
 
 }
 
 
 .hm-container{
+<<<<<<< HEAD
+  margin: 0% -1%;
+  padding: 0% 28% 3%;
+  display: inline-block;
+  width: 50%;
+}
+>>>>>>> 9ece6ad5f7819385b89a7a5ef0a2714a96abc921
+
+}
+
+<<<<<<< HEAD
+
+.hm-container{
+=======
+#mainContainer{
+  background-color: rgba(255, 255, 255, 0.39);
+  padding: 43% 6%;
+  width: 294%;
+  height: 741px;
+=======
+>>>>>>> 9ece6ad5f7819385b89a7a5ef0a2714a96abc921
   display: grid;
   justify-content: center;
   margin: 0 auto;
   width: 100vw;
+<<<<<<< HEAD
+=======
+>>>>>>> Frida
+>>>>>>> 9ece6ad5f7819385b89a7a5ef0a2714a96abc921
 }

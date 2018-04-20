@@ -47,6 +47,7 @@ end
 get '/post-edit/:id' do
     @post = Post.find(params[:id])
   erb :post_edit
+<<<<<<< HEAD
 end
 
 post '/post-edit/:id' do
@@ -66,10 +67,32 @@ post '/post-edit/:id' do
   redirect '/user'
 end
 
+=======
+end
+
+post '/post-edit/:id' do
+  @post = Post.find(params[:id])
+  if params[:title_edit].empty?
+    @post.title = @post.title
+  else
+     @post.title = params[:title_edit]
+  end
+
+  if params[:content_edit].empty?
+    @post.content = @post.content
+  else
+     @post.content = params[:content_edit]
+  end
+  @post.save
+  redirect '/user'
+end
+
+>>>>>>> 9ece6ad5f7819385b89a7a5ef0a2714a96abc921
 post '/delete/:id' do
   @post = Post.find(params[:id])
   @post.destroy
   redirect '/user'
+<<<<<<< HEAD
 end
 
 
@@ -84,6 +107,18 @@ get '/account' do
   erb :account
 end
 
+=======
+end
+
+
+
+
+get '/account' do
+  @posts = Post.all
+  erb :account
+end
+
+>>>>>>> 9ece6ad5f7819385b89a7a5ef0a2714a96abc921
 post '/account' do
     @user = current_user
     if params[:fnameEd].empty?
@@ -124,8 +159,16 @@ get '/user/destroy/:id' do
     session[:user_id] = nil
     @user = User.find(params[:id])
     @user.destroy
+<<<<<<< HEAD
     erb :home
 end
+
+
+=======
+
+    redirect '/'
+end
+>>>>>>> 9ece6ad5f7819385b89a7a5ef0a2714a96abc921
 
 
 

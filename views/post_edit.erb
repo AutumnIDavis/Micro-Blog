@@ -1,5 +1,6 @@
 
 <div class="hm-container">
+<<<<<<< HEAD
     <div class="welcomeHome">
       <h2>Edit Post</h2>
       <form class="" action="/post-edit/<%=@post.id%>" method="post">
@@ -16,4 +17,20 @@
       <input type="submit" name="delete" value="Delete">
     </form>
   </div>
+=======
+  <div class="welcomeHome">
+    <h2>Edit Post</h2>
+    <form class="" action="/post-edit/<%=@post.id%>" method="post">
+      <label for="">Edit Title</label><br>
+      <input type="text" name="title_edit" value=""><br>
+      <label for="">Edit Content</label>
+      <input type="text" name="content_edit" value="">
+      <input type="submit" name="submit" value="">
+    </form>
+  </div>
+  <form class="" action="/delete/<%=@post.id%>" method="post">
+    <input type="submit" name="delete" value="Delete">
+  </form>
+
+>>>>>>> 9ece6ad5f7819385b89a7a5ef0a2714a96abc921
 </div>
