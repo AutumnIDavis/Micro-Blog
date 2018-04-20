@@ -4,6 +4,7 @@ class CreatePostsTable < ActiveRecord::Migration[5.1]
           t.string :title, :limit => 50
           t.text :content
           t.integer :user_id
+      
       end
   end
 end

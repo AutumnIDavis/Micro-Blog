@@ -37,17 +37,48 @@ get '/users' do
     erb :users
 end
 
-get '/user/:id' do
-    @user = User.find(params[:id])
-    @posts = @user.posts
-    erb :user
+post '/users' do
+  @newpost = Post.create( title: params[:title], content: params[:blog], user_id: current_user.id)
+  redirect '/account'
 end
 
-get '/user' do
-  erb :user
+get '/post-edit/:id' do
+    @post = Post.find(params[:id])
+  erb :post_edit
 end
 
-post '/user' do
+post '/post-edit/:id' do
+  @post = Post.find(params[:id])
+  if params[:title_edit].empty?
+    @post.title = @post.title
+  else
+     @post.title = params[:title_edit]
+  end
+
+  if params[:content_edit].empty?
+    @post.content = @post.content
+  else
+     @post.content = params[:content_edit]
+  end
+  @post.save
+  redirect '/user'
+end
+
+post '/delete/:id' do
+  @post = Post.find(params[:id])
+  @post.destroy
+  redirect '/user'
+end
+
+
+
+
+get '/account' do
+  @posts = Post.all
+  erb :account
+end
+
+post '/account' do
     @user = current_user
     if params[:fnameEd].empty?
       @user.fname = @user.fname
@@ -80,13 +111,11 @@ get '/user/destroy/:id' do
     session[:user_id] = nil
     @user = User.find(params[:id])
     @user.destroy
-    flash[:notice] = "Account Deleted"
-    erb :home
+
+    redirect '/'
 end
 
-get '/account' do
-    erb :account
-end
+
 
 get '/sign-out' do
   session[:user_id] = nil
