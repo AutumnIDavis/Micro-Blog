@@ -1,38 +1,9 @@
 <div class="hm-container">
-      <div class="welcomeHome">
-        <h1><%= current_user.fname %>'s Settings</h1>
-          <form class="" action="/user" method="post">
-
-              <p>First Name: <%= current_user.fname %></p>
-              <input name="fnameEd" placeholder="First Name" value=""></input>
-
-              <p>Last Name: <%= current_user.lname %></p>
-              <input name="lnameEd" placeholder="Last Name" value=""></input>
-
-              <p>Password: <%= current_user.password %></p>
-              <input name="passEd" placeholder="Password" value=""></input>
-
-              <p>Age: <%= current_user.age %></p>
-              <input name="ageEd" placeholder="Age" value=""></input>
-
-              <input type="submit" name="submit"  value="Save">
-
-          </form>
-
-          <form class="" action="/user/destroy/<%= current_user.id %>" method="get">
-            <input id="delAcc" type="submit" name="" value="Delete Account" onclick="useDel()">
-          </form>
-
-     </div>
+  <div class="welcomeHome">
+    <h1>LIST OF POSTS</h1>
+      <% @posts.reverse_each do |post|  %>
+        <h4>Title: <%= post.title %></h4>
+        <p>Post: <%= post.content %></p>
+      <% end %>
   </div>
-
-  <script>
-
-  function signOut(){
-    window.location = '/sign-out'
-  }
-
-    function useDel(){
-      window.location = '/user/destroy/:id'
-    }
-  </script>
+</div>

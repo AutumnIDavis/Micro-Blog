@@ -11,12 +11,15 @@ body{
 }
 
 header{
+<<<<<<< HEAD
 
   background-color:rgba(0, 0, 0, 0.62);
   margin: -1%;
 }
 
 
+=======
+>>>>>>> c227235c609aa5dba694627c67c25b311ffd0a1e
   background-color: rgba(197, 23, 240, 0.32);
   margin: 0 auto;
 }
@@ -28,7 +31,10 @@ header{
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c227235c609aa5dba694627c67c25b311ffd0a1e
 ul{
   text-align: right;
 }
@@ -44,45 +50,6 @@ li {
   text-shadow: -3px 3px 9px black;
 }
 
-a{
-  text-decoration: none;
-  color: #4ce4f9;
-  font-size: 30px;
-  text-shadow: -5px 2px 8px black;
-}
-
-h1{
-  text-align: center;
-  font-size: 80px;
-}
-
-#city{
-  opacity: 0.4;
-  position: relative;
-  left: -1674px;
-  z-index: -1;
-}
-
-#bubbles{
-  display: inline-block;
-}
-
-#editBtn{
-  display: flex;
-  margin: 15px 0px;
-}
-
-#delAcc{
-  display: block;
-  margin: 50px 0px;
-  color: red;
-}
-
-#titleForm{
-  display: flex;
-  margin: 39px 0px;
-}
-
 #postTitle{
   padding: 20px 150px 135px 20px;
   margin: 20px;
@@ -93,12 +60,15 @@ h1{
   margin: 20px;
 }
 
+<<<<<<< HEAD
 
 
 .welcomeHome{
   background-color: rgba(186, 186, 186, 0.72);
   padding: 2% 8% 100%;
 
+=======
+>>>>>>> c227235c609aa5dba694627c67c25b311ffd0a1e
 a{
   text-decoration: none;
   color: #939393;
@@ -115,7 +85,10 @@ a{
 .welcomeHome {
   background-color: rgba(255, 255, 255, 0.6);
   padding: 2% 7% 100%;
+<<<<<<< HEAD
 
+=======
+>>>>>>> c227235c609aa5dba694627c67c25b311ffd0a1e
   border-right: solid #e4bdfa 2px;
   border-left: solid #e4bdfa 2px;
   width: 50vw;
@@ -126,6 +99,7 @@ a{
 
 
 .hm-container{
+<<<<<<< HEAD
 
   margin: 0% -1%;
   padding: 0% 28% 3%;
@@ -146,9 +120,14 @@ a{
   width: 294%;
   height: 741px;
 
+=======
+>>>>>>> c227235c609aa5dba694627c67c25b311ffd0a1e
   display: grid;
   justify-content: center;
   margin: 0 auto;
   width: 100vw;
+<<<<<<< HEAD
 
+=======
+>>>>>>> c227235c609aa5dba694627c67c25b311ffd0a1e
 }
