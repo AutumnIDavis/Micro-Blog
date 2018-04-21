@@ -11,12 +11,6 @@ body{
 }
 
 header{
-<<<<<<< HEAD
-  background-color:rgba(0, 0, 0, 0.62);
-  margin: -1%;
-}
-
-=======
   background-color: rgba(197, 23, 240, 0.32);
   margin: 0 auto;
 }
@@ -28,7 +22,6 @@ header{
 }
 
 
->>>>>>> Frida
 ul{
   text-align: right;
 }
@@ -44,45 +37,6 @@ li {
   text-shadow: -3px 3px 9px black;
 }
 
-a{
-  text-decoration: none;
-  color: #4ce4f9;
-  font-size: 30px;
-  text-shadow: -5px 2px 8px black;
-}
-
-h1{
-  text-align: center;
-  font-size: 80px;
-}
-
-#city{
-  opacity: 0.4;
-  position: relative;
-  left: -1674px;
-  z-index: -1;
-}
-
-#bubbles{
-  display: inline-block;
-}
-
-#editBtn{
-  display: flex;
-  margin: 15px 0px;
-}
-
-#delAcc{
-  display: block;
-  margin: 50px 0px;
-  color: red;
-}
-
-#titleForm{
-  display: flex;
-  margin: 39px 0px;
-}
-
 #postTitle{
   padding: 20px 150px 135px 20px;
   margin: 20px;
@@ -93,12 +47,6 @@ h1{
   margin: 20px;
 }
 
-<<<<<<< HEAD
-
-.welcomeHome{
-  background-color: rgba(186, 186, 186, 0.72);
-  padding: 2% 8% 100%;
-=======
 a{
   text-decoration: none;
   color: #939393;
@@ -115,7 +63,6 @@ a{
 .welcomeHome {
   background-color: rgba(255, 255, 255, 0.6);
   padding: 2% 7% 100%;
->>>>>>> Frida
   border-right: solid #e4bdfa 2px;
   border-left: solid #e4bdfa 2px;
   width: 50vw;
@@ -126,29 +73,8 @@ a{
 
 
 .hm-container{
-<<<<<<< HEAD
-  margin: 0% -1%;
-  padding: 0% 28% 3%;
-  display: inline-block;
-  width: 50%;
-}
-
-.hm-container1{
-  margin: 0% -1%;
-  /* padding: 0% 0% 3%; */
-  display: -webkit-inline-box;
-  width: 25%;
-}
-
-#mainContainer{
-  background-color: rgba(255, 255, 255, 0.39);
-  padding: 43% 6%;
-  width: 294%;
-  height: 741px;
-=======
   display: grid;
   justify-content: center;
   margin: 0 auto;
   width: 100vw;
->>>>>>> Frida
 }
