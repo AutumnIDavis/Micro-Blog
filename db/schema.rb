@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2018_04_06_123926) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title", limit: 50
-    t.text "content"
+    t.text "content", limit: 150
     t.integer "user_id"
   end
 
